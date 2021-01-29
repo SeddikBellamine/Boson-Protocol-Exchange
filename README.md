@@ -32,7 +32,7 @@ The Idea is to create and deploy two smart contracts, the first is marketplaceag
 
 # Uses cases done:
 
-- As a user I can list items for sale with a listing name and price in Ether.
+- As a user I can list items for sale with a name and price in Ether.
 - As a user I can browse existing listings(items) for sale.
 - As a user I can order an available listing.
 - As a user I can fund an escrow for the purchase of a listing.
