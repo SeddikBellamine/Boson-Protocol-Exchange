@@ -4,7 +4,7 @@ Boson Protocol is advancing the world of commerce by enabling enterprises, organ
 
 # Design
 
-The Idea is to create and deploy two smart contracts, the first is marketplaceagent that will handle listings(items), orders ... and the second will be about the escrow and will play the role of completing orders and holding funds until the buyer and the seller approve the order.
+The Idea is to create and deploy two smart contracts, the first is marketplaceagent that will handle listings(items), orders ... and the second will be about the escrow and will play the role of completing orders and holding funds until the buyer complete the order.
 ![alt text](https://i.ibb.co/z46Jt8S/diagrams.png)
 
 # Tools used for the implementation of the MVP
@@ -27,7 +27,7 @@ The Idea is to create and deploy two smart contracts, the first is marketplaceag
 5. Install Metamask and Open it.
 6. If MetaMask is not already connected to the ganache instance Choose “Restore from seed phrase” and copy the Mnemonic from the Ganache client along with a password of your choosing.
 7. If MetaMask does not already have the local network available in the drop down at the top left, then choose “Custom RPC” and enter a name of the network of your choice then enter http://localhost:#### replacing “####” with the correct port (which is by default 7545 for the desktop client) and enter the chain id as 1337 for ganache.
-8. Ensure that you have 3 accounts available within MetaMask using the account selection menu.
+8. Ensure that you have 4 accounts available within MetaMask using the account selection menu to test with the problem input.
 9. Refresh the browser page and then the web app will demand consent to use your metamask accounts, approve it and Ethereum Status panel should display the current account address, balance and the ID of the connected network.
 
 # Uses cases done:
@@ -39,3 +39,28 @@ The Idea is to create and deploy two smart contracts, the first is marketplaceag
 - As the buyer of a listing, I can complete the linked escrow and confirm the receipt of the item.
 - As a seller, my Ethereum account is funded with the proceeds of a sale once the buyer has completed/finalised the linked escrow, once the listed goods have exchanged possession.
 - As the buyer of a listing, I can complain the linked escrow should an issue with the exchange of physical goods occur.
+
+# Input:
+
+You can test the Dapp with this input:
+
+Buyer 1 | Credit | 20
+Buyer 2 | Credit | 40
+Seller 1 | Offer | Coffee, 3
+Seller 2 | Offer | T-Shirt, 5
+
+Seller 1 | Offer | Tea, 2.5
+Seller 1 | Offer | Cake, 3.5
+Seller 2 | Offer | Shorts, 8
+Seller 2 | Offer | Hoody, 12
+Buyer 1 | Order | T-Shirt
+Buyer 1 | Deposit | 10
+Buyer 2 | Order | Hoody
+Buyer 1 | Complete | T-Shirt
+Buyer 1 | Order | Coffee
+Buyer 1 | Order | Cake
+Buyer 2 | Complain | Hoody
+Buyer 2 | Order | Tea
+Buyer 1 | Complete | Coffee
+
+Ps: the system will not give the same output as in the problem statement because its a real Dapp and for each transaction there will be the cost of the transaction fees ...
