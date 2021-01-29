@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Boson-Protocol Exchange</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+</head>
+
+<body class="text-center">
+
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <h3 class="masthead-brand">Boson-Protocol Exchange</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="browseListings.html">Browse Listings</a>
+                <a class="nav-link" href="userListings.html">My Listings</a>
+                <a class="nav-link" href="userOrders.html">My Orders</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main" class="inner cover">
+        <div class="row">
+            <div class="col-md-8" id="listingRow">
+                <div class="col-md-1"></div>
+                <div class="col-md-12">
+                    <div id="listingSection">
+                        <h1>Currently Listed</h1>
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                        </tr>
+                        </thead>
+                        <tbody id="marketListings"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="right-column"></div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+<script src="js/app.js"></script>
+<script src="js/marketplace.js"></script>
+<script src="js/browseListings.js"></script>
+</body>
+</html>

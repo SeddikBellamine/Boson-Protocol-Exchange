@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Boson-Protocol Exchange</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+</head>
+
+<body class="text-center">
+
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <h3 class="masthead-brand">Boson-Protocol Exchange</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="browseListings.html">Browse Listings</a>
+                <a class="nav-link active" href="userListings.html">My Listings</a>
+                <a class="nav-link" href="userOrders.html">My Orders</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main" class="inner cover">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>My items</h1>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Available</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody id="userListings"></tbody>
+                </table>
+                <h1>Offer item</h1>
+                <table class="listingDetails">
+                    <tr><td class="listingLabel"><label for="listingName">Item Name:</label></td><td><input type="text" id="listingName" ></input></td></tr>
+                    <tr><td class="listingLabel"><label for="listingPrice">Price in Ether:</label></td><td><input type="text" id="listingPrice"></input></td></tr>
+                    <tr><td class="listingLabel">&nbsp;</td><td><button id="createListing" onclick="App.createListing()">Offer Item</button></td></tr>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <div id="right-column"></div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+<script src="js/app.js"></script>
+<script src="js/marketplace.js"></script>
+<script src="js/userListings.js"></script>
+</body>
+</html>
